@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+@import 'mixins';
 
 body {
 	font-family: 'Quicksand', sans-serif;
+	background: $bgcolor-1; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(-45deg, $bgcolor-2, $bgcolor-1); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(-45deg, $bgcolor-2, $bgcolor-1); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(-45deg, $bgcolor-2, $bgcolor-1); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(-45deg, $bgcolor-2, $bgcolor-1); /* Standard syntax */
+	height: 100vh;
 }
