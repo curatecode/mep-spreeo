@@ -1,7 +1,16 @@
 extends ../layouts/_default_layout.pug
 
 block bodyContent
-	.container
-		.row
-			.col-12
-				h1 Login
+	
+	.section.section-login.d-flex.justify-content-center.align-items-center
+		.container
+			h3.pg-title.text-center Muzium Telekom Malaysia
+			.card.mb-5
+				ul.list-group.list-group-flush
+					li.list-group-item
+						input.form-control.form-username(type="text", placeholder="Nickname")
+					li.list-group-item
+						input.form-control.form-email(type="email", placeholder="E-mail")
+					li.list-group-item
+						input.form-control.form-qr(type="text", placeholder="Unique ID")
+			button.btn.btn-gradient-blue.btn-block Sign In

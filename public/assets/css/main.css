@@ -1,6 +1,32 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700");
+@media (min-width: 768px) {
+  .container {
+    max-width: 540px; } }
+
+input.form-control:not[type="radio"],
+input.form-control :not[type="checkbox"] {
+  height: 48px; }
+
+.btn {
+  border-radius: 1.875rem;
+  font-weight: 700;
+  height: 48px; }
+  .btn.btn-gradient-blue {
+    background: #076EE5;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(90deg, #076EE5, #00A8EE);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(90deg, #076EE5, #00A8EE);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(90deg, #076EE5, #00A8EE);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(90deg, #076EE5, #00A8EE);
+    /* Standard syntax */
+    border: 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    color: #fff; }
+
 body {
-  font-family: 'Quicksand', sans-serif;
   background: #FF7C00;
   /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(-45deg, #FFD400, #FF7C00);
@@ -11,4 +37,44 @@ body {
   /* For Firefox 3.6 to 15 */
   background: linear-gradient(-45deg, #FFD400, #FF7C00);
   /* Standard syntax */
-  height: 100vh; }
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  min-height: 100vh; }
+
+.section-login {
+  min-height: 100vh; }
+  .section-login .card {
+    border: 0;
+    border-radius: 0.5rem; }
+    .section-login .card > .list-group .list-group-item {
+      background: transparent;
+      border-color: rgba(0, 0, 0, 0.06);
+      padding: 0; }
+      .section-login .card > .list-group .list-group-item .form-control {
+        border: 0;
+        border-radius: 0;
+        height: 48px;
+        padding-left: 46px; }
+        .section-login .card > .list-group .list-group-item .form-control::placeholder {
+          color: #999; }
+      .section-login .card > .list-group .list-group-item:first-child .form-control {
+        border-radius: 0.5rem 0.5rem 0 0; }
+      .section-login .card > .list-group .list-group-item:last-child .form-control {
+        border-radius: 0 0 0.5rem 0.5rem; }
+  .section-login .form-username,
+  .section-login .form-email,
+  .section-login .form-qr {
+    background-position: 0.938rem center;
+    background-repeat: no-repeat;
+    background-size: 16px; }
+  .section-login .form-username {
+    background-image: url("../images/icn-user.svg"); }
+  .section-login .form-email {
+    background-image: url("../images/icn-email.svg"); }
+  .section-login .form-qr {
+    background-image: url("../images/icn-qr.svg"); }
+
+.pg-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding: 0.938rem 0 2.5rem; }

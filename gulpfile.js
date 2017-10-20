@@ -14,6 +14,7 @@ gulp.task('serve', ['sass'], function() {
   gulp.watch("source/**/*.pug", ["views"]).on('change', browserSync.reload);
   gulp.watch("source/assets/js/*.js", ["js-watch"]);
   gulp.watch("source/vendor/**/*", ["copy"]);
+  gulp.watch("source/assets/*", ["img-watch"]);
 });
 
 gulp.task('views', function buildHTML() {
@@ -36,6 +37,11 @@ gulp.task('js-watch', function() {
   return gulp.src("source/assets/js/*.js")
 	  // .pipe(uglify())
 	  .pipe(gulp.dest("public/assets/js"));
+});
+
+gulp.task('img-watch', function() {
+  return gulp.src("source/assets/images/*")
+	  .pipe(gulp.dest("public/assets/images"));
 });
 
 gulp.task('copy', function() {

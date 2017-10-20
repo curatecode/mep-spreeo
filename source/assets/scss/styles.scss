@@ -1,12 +1,99 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
 @import 'mixins';
 
+// Overwrite container max width
+@media (min-width: 768px) {
+	.container {
+		max-width: 540px;
+	}
+}
+
+input.form-control {
+	&:not[type="radio"],
+	:not[type="checkbox"] {
+		height: 48px;
+	}
+}
+
+.btn {
+	border-radius: 1.875rem;
+	font-weight: 700;
+	height: 48px;
+	&.btn-gradient-blue {
+		background: $bgblue-1; /* For browsers that do not support gradients */
+		background: -webkit-linear-gradient(90deg, $bgblue-1, $bgblue-2); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(90deg, $bgblue-1, $bgblue-2); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(90deg, $bgblue-1, $bgblue-2); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(90deg, $bgblue-1, $bgblue-2); /* Standard syntax */
+		border: 0;
+		box-shadow: 0 0 15px rgba(0,0,0,0.15);
+		color: #fff;
+	}
+}
+
 body {
-	font-family: 'Quicksand', sans-serif;
 	background: $bgcolor-1; /* For browsers that do not support gradients */
 	background: -webkit-linear-gradient(-45deg, $bgcolor-2, $bgcolor-1); /* For Safari 5.1 to 6.0 */
 	background: -o-linear-gradient(-45deg, $bgcolor-2, $bgcolor-1); /* For Opera 11.1 to 12.0 */
 	background: -moz-linear-gradient(-45deg, $bgcolor-2, $bgcolor-1); /* For Firefox 3.6 to 15 */
 	background: linear-gradient(-45deg, $bgcolor-2, $bgcolor-1); /* Standard syntax */
-	height: 100vh;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1rem;
+	min-height: 100vh;
+}
+
+.section-login {
+	min-height: 100vh;
+	.card {
+		border: 0;
+		border-radius: 0.5rem;
+		> .list-group {
+			.list-group-item {
+				background: transparent;
+				border-color: rgba(0, 0, 0, 0.06);
+				padding: 0;
+				.form-control {
+					border: 0;
+					border-radius: 0;
+					height: 48px;
+					padding-left: 46px;
+					&::placeholder {
+						color: #999;
+					}
+				}
+				&:first-child {
+					.form-control {
+						border-radius: 0.5rem 0.5rem 0 0;
+					}
+				}
+				&:last-child {
+					.form-control {
+						border-radius: 0 0 0.5rem 0.5rem;
+					}
+				}
+			}
+		}
+	}
+	.form-username,
+	.form-email,
+	.form-qr {
+		background-position: 0.938rem center;
+		background-repeat: no-repeat;
+		background-size: 16px;
+	}
+	.form-username {
+		background-image: url('../images/icn-user.svg');
+	}
+	.form-email {
+		background-image: url('../images/icn-email.svg');
+	}
+	.form-qr {
+		background-image: url('../images/icn-qr.svg');
+	}
+}
+
+.pg-title {
+	font-size: 1.125rem;
+	font-weight: 700;
+	padding: 0.938rem 0 2.5rem;
 }
